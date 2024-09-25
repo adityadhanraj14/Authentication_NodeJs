@@ -1,12 +1,31 @@
 const express=require("express");
-const path = require("ejs");
+const path = require("path");
 const mongoose=require("mongoose");
 
 const PORT = 8003;
 
+const app=express();
+
+//seting view engine
 app.set("view engine","ejs");
 app.set("views",path.resolve("./views"));
 
-mongoose.connect("mongodb://localhost:27017/protfolio",()=>console.log("mongodb connected succesfully"));
+//connecting mongodb
+mongoose.connect("mongodb://localhost:27017/portfolio")
+  .then(() => console.log("MongoDB connected successfully"))
+  .catch(err => console.error("MongoDB connection error:", err));
+//routers
+app.get('/home',(req,res)=>{
+    return res.render("home");
+})
 
+app.get('/signup',(req,res)=>{
+    return res.render("signup");
+})
+
+app.get('/login',(req,res)=>{
+    return res.render("login");
+})
+
+//setting port
 app.listen(PORT,()=>console.log("server started at port:",PORT));
