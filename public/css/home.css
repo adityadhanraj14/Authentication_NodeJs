@@ -1,0 +1,164 @@
+/* Reset some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f0f0f5;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header styles */
+header {
+  background-color: #4A90E2;
+  padding: 20px 0;
+}
+
+header h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 15px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* White text for navigation links */
+  padding: 10px 15px; /* Padding for better click area */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.nav-links a:hover {
+  background-color: #357ABD; /* Darker color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+.search-bar {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Hero section */
+.hero {
+  background-color: #e1f5fe;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.hero h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.primary-btn {
+  background-color: #4A90E2;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #357ABD; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.secondary-btn {
+  background-color: #fff;
+  color: #4A90E2;
+  border: 1px solid #4A90E2;
+}
+
+.secondary-btn:hover {
+  background-color: #4A90E2; /* Change to the primary color on hover */
+  color: #fff; /* Text color white on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+
+/* User showcase styles */
+.user-showcase {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+.user-showcase h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-card {
+  background-color: #e1f5fe;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+}
+
+/* About us section */
+.about-company {
+  padding: 40px 20px;
+  background-color: #f0f0f5;
+  text-align: center;
+}
+
+.about-company h2 {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #4A90E2;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

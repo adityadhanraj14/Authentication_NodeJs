@@ -6,6 +6,9 @@ const PORT = 8003;
 
 const app=express();
 
+//making public file static
+app.use(express.static('public'));
+
 //seting view engine
 app.set("view engine","ejs");
 app.set("views",path.resolve("./views"));
@@ -25,6 +28,9 @@ app.get('/signup',(req,res)=>{
 
 app.get('/login',(req,res)=>{
     return res.render("login");
+})
+app.get('/protfolio',(req,res)=>{
+    return res.render("protfolio");
 })
 
 //setting port
