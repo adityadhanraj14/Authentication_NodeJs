@@ -1,6 +1,7 @@
 const express=require("express");
 const path = require("path");
 const mongoose=require("mongoose");
+const authRoutes = require("./routers/auth");
 
 const PORT = 8003;
 
@@ -17,21 +18,21 @@ app.set("views",path.resolve("./views"));
 mongoose.connect("mongodb://localhost:27017/portfolio")
   .then(() => console.log("MongoDB connected successfully"))
   .catch(err => console.error("MongoDB connection error:", err));
+//middleware
+// app.use(express.json());
+// app.use(express.urlencoded({extended:false}));
+
 //routers
+
 app.get('/home',(req,res)=>{
     return res.render("home");
 })
 
-app.get('/signup',(req,res)=>{
-    return res.render("signup");
-})
-
-app.get('/login',(req,res)=>{
-    return res.render("login");
-})
 app.get('/protfolio',(req,res)=>{
     return res.render("protfolio");
 })
+
+app.use('/',authRoutes);
 
 //setting port
 app.listen(PORT,()=>console.log("server started at port:",PORT));
